@@ -89,7 +89,14 @@ function getRandomInt(max) {
 let cadeau = document.getElementById("cadeau");
 let imgCat = document.getElementById("imgCat")
 let pasAssez = document.getElementById("pasAssez")
-let catId = [];
+let descri = document.getElementById("description")
+let nam = document.getElementById("name")
+
+let cat = {                             // creation de l'objet cat
+      id : "",
+      name :"",
+      description : ""
+}
 
 cadeau.addEventListener("click", ()=>{
     pasAssez.innerHTML = ""
@@ -100,17 +107,19 @@ if (token >= 5) {
 fetch("https://api.thecatapi.com/v1/breeds")
   .then((reponse) => reponse.json())
   .then((picture) => {
-    for (let i = 0; i < 60; i++) {
-      catId.push(picture[i].id);                   // push l'url dans le catId
-      console.log(picture)
-    }
-    let randomCat = catId[getRandomInt(60)];        // le randomCat recupere un random dans le catId
-    console.log(randomCat);
+  
+    let catData = picture[getRandomInt(60)];        // fait le random sur le tableau de la data full
+    cat.id = catData.id                             // cat.id est l'id dans l'objet cat. catData est ma data random et je vais a l'interieur dans le .id
+    cat.name = catData.name                         // ca me permet d'entrer le l'id de la data dans l'id de mon cat
+    cat.description = catData.description
+    
 
-    fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${randomCat}`)  
+    fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${cat.id}`)  
       .then((reponse) => reponse.json())
       .then((photo) => {
-        imgCat.src = photo[0].url         
+        imgCat.src = photo[0].url  
+        descri.innerHTML = cat.description
+        nam.innerHTML = cat.name
       });
   });
   

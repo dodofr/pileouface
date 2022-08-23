@@ -104,5 +104,18 @@ button {
     height: auto;
     width: auto;
     max-height: 500px;
-    max-width: 700px;
+    max-width: 600px;
+  }
+  #name{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    text-align: center;
+    color: green;
+  }
+  #description{
+    grid-column: 3/4;
+    grid-row: 5/6;
+    margin-left: 40px;
+    color: darkblue;
+    font-size: 2em;
   }
