@@ -1,0 +1,108 @@
+h1 {
+    font-size: 3em;
+    color: red;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#chance{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+p{
+    font-size: 2em;
+    color: blue
+}
+#token{
+    font-size: 2.5em;
+    color: blueviolet;
+    text-align: end;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: center;
+}
+select{
+    
+        display: inline-block;
+        background-color: orange;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: white;
+        text-align: center;
+        font-size: 1em;
+        padding: 20px;
+        width: 100px;
+        cursor: pointer;
+        margin: 5px;
+      
+}
+button {
+    display: inline-block;
+    background-color: red;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    margin: 5px;
+    
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin: 20px 50px;
+  }
+  .selection{
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  .pile{
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+  }
+  #face{
+    grid-column: 3/4;
+    grid-row: 3/4;
+ 
+  }
+  #cadeau{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 100%;
+  }
+  #h2result{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #stats{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: end;
+  }
+  #pasAssez{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    color: brown;
+    text-align: center;
+  }
+  #imgCat{
+    grid-column: 1/4;
+    grid-row: 5/6;
+    margin: auto;
+    height: auto;
+    width: auto;
+    max-height: 500px;
+    max-width: 700px;
+  }

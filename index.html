@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="piece.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid">
+    <h1>PILE OU FACE</h1>
+    <p id="chance">Bonne chance !!! </p>
+    <h3 id="token"> Vous avez 5 tokens</h3>
+
+    <div class="pile">
+        <p id="votreChoix"></p>
+        <img id="img">
+    </div>
+    <div class="selection">
+        <select name="select" id="choix">
+        <option value="c" id="c">faites votre choix</option>
+        <option value="0">pile</option>
+        <option value="1">face</option>
+       
+      </select>
+      <button id="btn">lance la piece</button>
+    </div>
+      <div id="face">
+      <p id="leResult"></p>
+      <img id="imgResult">
+      <p id="results"></p>
+    </div>
+    
+      <h2 id="h2result"></h2>
+      <h3 id="stats"></h3>
+
+      <button id="cadeau">Récupere ton image de chat pour 5 tokens</button>
+      <img id="imgCat">
+      <h2 id="pasAssez"></h2>
+    </div>
+    <script src="piece.js"></script>
+</body>
+</html>
